@@ -1,5 +1,11 @@
 # OS1 Example ROS Node
 
+> roslaunch执行时，到src目录下 或者指定绝对路径到launch目录下os1. launch 执行
+>
+> 看点云也到绝对路径下src/viz下 执行：rviz -d viz. rviz
+
+
+
 ## Contents
 * `ouster_ros/` contains sample code for publishing OS1 data as standard
  ROS topics
