@@ -51,16 +51,18 @@ target_include_directories(os1_cloud_node PRIVATE include ${catkin_INCLUDE_DIRS}
 add_dependencies(os1_cloud_node ${PROJECT_NAME}_gencpp)
 
 
-
-
-
-
-
 # ==== Install ====
 install(TARGETS os1_node os1_cloud_node 
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-install(FILES launch/os1.launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(DIRECTORY launch/
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+        PATTERN ".svn" EXCLUDE
+        )
 
+install(DIRECTORY rviz/
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rviz
+        PATTERN ".svn" EXCLUDE
+        )

@@ -60,3 +60,11 @@ POINT_CLOUD_REGISTER_POINT_STRUCT(ouster_ros::OS1::PointOS1,
     (uint32_t, range, range)
 )
 // clang-format on
+
+
+struct EIGEN_ALIGN16 PointXYZIR {
+    PCL_ADD_POINT4D;                    // quad-word XYZ
+    float    intensity;                 ///< laser intensity reading
+    uint16_t ring;                      ///< laser ring number
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW     // ensure proper alignment
+};
