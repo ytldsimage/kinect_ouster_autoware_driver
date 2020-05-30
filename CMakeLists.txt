@@ -57,12 +57,12 @@ install(TARGETS os1_node os1_cloud_node
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-install(DIRECTORY launch/
+install(DIRECTORY src/launch/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
         PATTERN ".svn" EXCLUDE
         )
 
-install(DIRECTORY rviz/
+install(DIRECTORY src/rviz/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rviz
         PATTERN ".svn" EXCLUDE
         )
